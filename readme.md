@@ -28,3 +28,6 @@ https://github.com/xamarin/java.interop/wiki/Troubleshooting-Android-Bindings-Is
 - https://gist.github.com/JonDouglas/dda6d8ace7d071b0e8cb#approaching-a-xamarinandroid-bindings-case
 - https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata
 - https://docs.microsoft.com/en-us/xamarin/android/deploy-test/building-apps/build-items
+
+## Example app
+As of today I'm using this library in one of my app, which is available for [iOS](https://apps.apple.com/us/app/microsoft-to-do-list-for-watch/id1566765622) and [android](https://play.google.com/store/apps/details?id=com.hcsaba.mstodo)
