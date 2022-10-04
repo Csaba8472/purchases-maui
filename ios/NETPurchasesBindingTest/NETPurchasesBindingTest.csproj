@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-ios</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+    <ApplicationId>com.hcsaba.popcornornot</ApplicationId>
+  </PropertyGroup>
+
+  <PropertyGroup>
+       <!--<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>-->
+       <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NETPurchasesBindingIOS">
+      <HintPath>..\NETPurchasesBindingIOS\bin\Release\net6.0-ios\NETPurchasesBindingIOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

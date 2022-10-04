@@ -1,0 +1,153 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PurchasesHybridCommon
+import Foundation
+@_exported import PurchasesHybridCommon
+import RevenueCat
+import StoreKit
+import Swift
+import _Concurrency
+@objc extension RevenueCat.CustomerInfo {
+  @objc final public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.StoreProductDiscount {
+  @objc final public var rc_currencyCode: Swift.String? {
+    @objc get
+  }
+  @objc final public var rc_dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.StoreProduct {
+  @objc final public var rc_dictionary: [Swift.String : Any] {
+    @objc get
+  }
+  @objc(rc_normalizedSubscriptionPeriod:) public static func rc_normalized(subscriptionPeriod: RevenueCat.SubscriptionPeriod) -> Swift.String
+  @objc(rc_normalizedSubscriptionPeriodUnit:) public static func rc_normalized(subscriptionPeriodUnit: RevenueCat.SubscriptionPeriod.Unit) -> Swift.String
+}
+@objc(RCErrorContainer) public class ErrorContainer : ObjectiveC.NSObject {
+  @objc final public let code: Swift.Int
+  @objc final public let message: Swift.String
+  @objc final public let info: [Swift.String : Any]
+  @objc final public let error: Foundation.NSError
+  @objc public init(error: Swift.Error, extraPayload: [Swift.String : Any])
+  @objc deinit
+}
+@objc extension RevenueCat.EntitlementInfo {
+  @objc dynamic public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.PromotionalOffer {
+  @objc final public var rc_dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.Package {
+  @objc dynamic public func dictionary(_ offeringIdentifier: Swift.String) -> [Swift.String : Any]
+}
+@objc extension RevenueCat.Purchases {
+  @objc(configureWithAPIKey:appUserID:observerMode:userDefaultsSuiteName:platformFlavor:platformFlavorVersion:usesStoreKit2IfAvailable:dangerousSettings:) public static func configure(apiKey: Swift.String, appUserID: Swift.String?, observerMode: Swift.Bool, userDefaultsSuiteName: Swift.String?, platformFlavor: Swift.String?, platformFlavorVersion: Swift.String?, usesStoreKit2IfAvailable: Swift.Bool = false, dangerousSettings: RevenueCat.DangerousSettings?) -> RevenueCat.Purchases
+}
+@objc extension RevenueCat.StoreTransaction {
+  @objc final public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.EntitlementInfos {
+  @objc dynamic public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.Offering {
+  @objc dynamic public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.Offerings {
+  @objc dynamic public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@objc extension RevenueCat.NonSubscriptionTransaction {
+  @objc final public var dictionary: [Swift.String : Any] {
+    @objc get
+  }
+}
+@_inheritsConvenienceInitializers @objc(RCCommonFunctionality) public class CommonFunctionality : ObjectiveC.NSObject {
+  @objc public static var simulatesAskToBuyInSandbox: Swift.Bool
+  @objc public static var appUserID: Swift.String {
+    @objc get
+  }
+  @objc public static var isAnonymous: Swift.Bool {
+    @objc get
+  }
+  @objc public static var proxyURLString: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var simulatesAskToBuyInSandbox: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @available(*, deprecated, message: "Use the set<NetworkId> functions instead")
+  @objc public static func setAllowSharingStoreAccount(_ allowSharingStoreAccount: Swift.Bool)
+  @objc public static func setDebugLogsEnabled(_ enabled: Swift.Bool)
+  @objc public static func setAutomaticAppleSearchAdsAttributionCollection(_ enabled: Swift.Bool)
+  @objc public static func setFinishTransactions(_ finishTransactions: Swift.Bool)
+  @objc public static func invalidateCustomerInfoCache()
+  @available(iOS 14.0, *)
+  @available(tvOS, unavailable)
+  @available(macOS, unavailable)
+  @available(watchOS, unavailable)
+  @objc public static func presentCodeRedemptionSheet()
+  @objc public static func canMakePaymentsWithFeatures(_ features: [Swift.Int]) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc extension PurchasesHybridCommon.CommonFunctionality {
+  @objc(restorePurchasesWithCompletionBlock:) public static func restorePurchases(completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+  @objc(syncPurchasesWithCompletionBlock:) public static func syncPurchases(completion: (([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)?)
+  @objc(purchaseProduct:signedDiscountTimestamp:completionBlock:) public static func purchase(product productIdentifier: Swift.String, signedDiscountTimestamp: Swift.String?, completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+  @objc(purchasePackage:offering:signedDiscountTimestamp:completionBlock:) public static func purchase(package packageIdentifier: Swift.String, offeringIdentifier: Swift.String, signedDiscountTimestamp: Swift.String?, completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+  @objc(makeDeferredPurchase:completionBlock:) public static func makeDeferredPurchase(_ startPurchase: (@escaping RevenueCat.PurchaseCompletedBlock) -> Swift.Void, completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+}
+@objc extension PurchasesHybridCommon.CommonFunctionality {
+  @objc(logInWithAppUserID:completionBlock:) public static func logIn(appUserID: Swift.String, completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+  @objc(logOutWithCompletionBlock:) public static func logOut(completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+  @objc(getCustomerInfoWithCompletionBlock:) public static func customerInfo(completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+}
+@objc extension PurchasesHybridCommon.CommonFunctionality {
+  @objc(getOfferingsWithCompletionBlock:) public static func getOfferings(completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+  @objc(checkTrialOrIntroductoryPriceEligibility:completionBlock:) public static func checkTrialOrIntroductoryPriceEligibility(for products: [Swift.String], completion: @escaping ([Swift.String : Any]) -> Swift.Void)
+  @objc public static func getProductInfo(_ productIds: [Swift.String], completionBlock: @escaping ([[Swift.String : Any]]) -> Swift.Void)
+  @objc(promotionalOfferForProductIdentifier:discount:completionBlock:) public static func promotionalOffer(for productIdentifier: Swift.String, discountIdentifier: Swift.String?, completion: @escaping ([Swift.String : Any]?, PurchasesHybridCommon.ErrorContainer?) -> Swift.Void)
+}
+@objc extension PurchasesHybridCommon.CommonFunctionality {
+  @objc public static func setAttributes(_ attributes: [Swift.String : Any])
+  @objc public static func setEmail(_ email: Swift.String?)
+  @objc public static func setPhoneNumber(_ phoneNumber: Swift.String?)
+  @objc public static func setDisplayName(_ displayName: Swift.String?)
+  @objc public static func setPushToken(_ pushToken: Swift.String?)
+}
+@objc extension PurchasesHybridCommon.CommonFunctionality {
+  @objc public static func collectDeviceIdentifiers()
+  @objc public static func setAdjustID(_ adjustID: Swift.String?)
+  @objc public static func setAppsflyerID(_ appsflyerID: Swift.String?)
+  @objc public static func setFBAnonymousID(_ fbAnonymousID: Swift.String?)
+  @objc public static func setMparticleID(_ mParticleID: Swift.String?)
+  @objc public static func setOnesignalID(_ onesignalID: Swift.String?)
+  @objc public static func setAirshipChannelID(_ airshipChannelID: Swift.String?)
+  @available(*, deprecated, message: "Use the set<NetworkId> functions instead")
+  @objc public static func addAttributionData(_ data: [Swift.String : Any], network: Swift.Int, networkUserId: Swift.String)
+}
+@objc extension PurchasesHybridCommon.CommonFunctionality {
+  @objc public static func setMediaSource(_ mediaSource: Swift.String?)
+  @objc public static func setCampaign(_ campaign: Swift.String?)
+  @objc public static func setAdGroup(_ adGroup: Swift.String?)
+  @objc public static func setAd(_ ad: Swift.String?)
+  @objc public static func setKeyword(_ keyword: Swift.String?)
+  @objc public static func setCreative(_ creative: Swift.String?)
+}

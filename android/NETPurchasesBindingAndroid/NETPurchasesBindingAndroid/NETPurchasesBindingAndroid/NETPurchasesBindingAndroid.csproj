@@ -1,0 +1,319 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+ 
+	<ItemGroup>
+		<AndroidAarLibrary Include="Jar\NETPurchases-release.aar" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AndroidLibrary Remove="androidx.drawerlayout.drawerlayout-1.0.0.aar" />
+		<AndroidLibrary Remove="androidx.appcompat.appcompat-1.2.0.aar" />
+		<AndroidLibrary Remove="androidx.appcompat.appcompat-resources-1.2.0.aar" />
+		
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-common-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-feature-identity-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-feature-subscriber-attributes-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-public-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-strings-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-utils-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-hybrid-common-3.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-store-amazon-5.3.0.aar" />
+		<AndroidLibrary Remove="com.revenuecat.purchases.purchases-store-google-5.3.0.aar" />
+
+		<AndroidLibrary Remove="androidx.activity.activity-1.0.0.aar" />
+		<AndroidLibrary Remove="androidx.annotation.annotation-1.3.0.jar" />
+		<AndroidLibrary Remove="androidx.annotation.annotation-experimental-1.1.0.aar" />
+		<AndroidLibrary Remove="androidx.arch.core.core-common-2.1.0.jar" />
+		<AndroidLibrary Remove="androidx.arch.core.core-runtime-2.1.0.aar" />
+		<AndroidLibrary Remove="androidx.collection.collection-1.1.0.jar" />
+		<AndroidLibrary Remove="androidx.concurrent.concurrent-futures-1.0.0.jar" />
+		<AndroidLibrary Remove="androidx.core.core-1.8.0.aar" />
+		<AndroidLibrary Remove="androidx.core.core-ktx-1.8.0.aar" />
+		<AndroidLibrary Remove="androidx.cursoradapter.cursoradapter-1.0.0.aar" />
+
+		<AndroidLibrary Remove="androidx.customview.customview-1.0.0.aar" />
+		<AndroidLibrary Remove="androidx.fragment.fragment-1.1.0.aar" />
+		<AndroidLibrary Remove="androidx.interpolator.interpolator-1.0.0.aar" />
+		<AndroidLibrary Remove="androidx.lifecycle.lifecycle-common-2.3.1.jar" />
+		<AndroidLibrary Remove="androidx.lifecycle.lifecycle-livedata-2.0.0.aar" />
+		<AndroidLibrary Remove="androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar" />
+		<AndroidLibrary Remove="androidx.lifecycle.lifecycle-process-2.3.0-rc01.aar" />
+		<AndroidLibrary Remove="androidx.lifecycle.lifecycle-runtime-2.3.1.aar" />
+		<AndroidLibrary Remove="androidx.lifecycle.lifecycle-viewmodel-2.1.0.aar" />
+		<AndroidLibrary Remove="androidx.loader.loader-1.0.0.aar" />
+
+		<AndroidLibrary Remove="androidx.savedstate.savedstate-1.0.0.aar" />
+		<AndroidLibrary Remove="androidx.vectordrawable.vectordrawable-1.1.0.aar" />
+		<AndroidLibrary Remove="androidx.vectordrawable.vectordrawable-animated-1.1.0.aar" />
+		<AndroidLibrary Remove="androidx.versionedparcelable.versionedparcelable-1.1.1.aar" />
+		<AndroidLibrary Remove="androidx.viewpager.viewpager-1.0.0.aar" />
+		<AndroidLibrary Remove="com.amazon.device.amazon-appstore-sdk-3.0.2.jar" />
+		<AndroidLibrary Remove="com.android.billingclient.billing-4.1.0.aar" />
+		<AndroidLibrary Remove="com.google.android.gms.play-services-ads-identifier-17.0.1.aar" />
+		<AndroidLibrary Remove="com.google.android.gms.play-services-basement-17.0.0.aar" />
+		<AndroidLibrary Remove="com.google.guava.listenablefuture-1.0.jar" />
+
+
+		<AndroidLibrary Remove="org.jetbrains.annotations-13.0.jar" />
+		<AndroidLibrary Remove="org.jetbrains.kotlin.kotlin-android-extensions-runtime-1.4.20.jar" />
+		<AndroidLibrary Remove="org.jetbrains.kotlin.kotlin-parcelize-runtime-1.4.20.jar" />
+		<AndroidLibrary Remove="org.jetbrains.kotlin.kotlin-stdlib-1.7.10.jar" />
+		<AndroidLibrary Remove="org.jetbrains.kotlin.kotlin-stdlib-common-1.7.10.jar" />
+		<AndroidLibrary Remove="org.jetbrains.kotlin.kotlin-stdlib-jdk7-1.7.10.jar" />
+		<AndroidLibrary Remove="org.jetbrains.kotlin.kotlin-stdlib-jdk8-1.7.10.jar" />
+		
+		
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidAarLibrary Include="androidx.activity.activity-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.annotation.annotation-experimental-1.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.appcompat.appcompat-1.2.0.aar">
+			<Bind>False</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.appcompat.appcompat-resources-1.2.0.aar">
+			<Bind>False</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.arch.core.core-runtime-2.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.core.core-1.8.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.core.core-ktx-1.8.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.cursoradapter.cursoradapter-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.customview.customview-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.drawerlayout.drawerlayout-1.0.0.aar">
+			<Bind>False</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.fragment.fragment-1.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.interpolator.interpolator-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.lifecycle.lifecycle-livedata-2.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.lifecycle.lifecycle-process-2.3.0-rc01.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.lifecycle.lifecycle-runtime-2.3.1.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.lifecycle.lifecycle-viewmodel-2.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.loader.loader-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.savedstate.savedstate-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.vectordrawable.vectordrawable-1.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.vectordrawable.vectordrawable-animated-1.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+
+
+		<AndroidAarLibrary Include="androidx.versionedparcelable.versionedparcelable-1.1.1.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="androidx.viewpager.viewpager-1.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.android.billingclient.billing-4.1.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.google.android.gms.play-services-ads-identifier-17.0.1.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.google.android.gms.play-services-basement-17.0.0.aar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+			<AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+		</AndroidAarLibrary>
+	</ItemGroup>
+
+	<ItemGroup>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-common-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-store-amazon-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-feature-identity-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-feature-subscriber-attributes-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-public-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-strings-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-utils-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-hybrid-common-3.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+		<AndroidAarLibrary Include="com.revenuecat.purchases.purchases-store-google-5.3.0.aar">
+			<Bind>true</Bind>
+			<Pack>true</Pack>
+			
+		</AndroidAarLibrary>
+	</ItemGroup>
+
+	<ItemGroup>
+		<AndroidExternalJavaLibrary Include="androidx.annotation.annotation-1.3.0.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="androidx.arch.core.core-common-2.1.0.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="androidx.collection.collection-1.1.0.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="androidx.concurrent.concurrent-futures-1.0.0.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="androidx.lifecycle.lifecycle-common-2.3.1.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="com.amazon.device.amazon-appstore-sdk-3.0.2.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="com.google.guava.listenablefuture-1.0.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.annotations-13.0.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.kotlin.kotlin-android-extensions-runtime-1.4.20.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.kotlin.kotlin-parcelize-runtime-1.4.20.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.kotlin.kotlin-stdlib-1.7.10.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.kotlin.kotlin-stdlib-common-1.7.10.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.kotlin.kotlin-stdlib-jdk7-1.7.10.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+		<AndroidExternalJavaLibrary Include="org.jetbrains.kotlin.kotlin-stdlib-jdk8-1.7.10.jar">
+			<Bind>false</Bind>
+			<Pack>true</Pack>
+		</AndroidExternalJavaLibrary>
+	</ItemGroup>
+</Project>

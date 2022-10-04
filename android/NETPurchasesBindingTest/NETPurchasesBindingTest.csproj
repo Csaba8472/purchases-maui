@@ -1,0 +1,105 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>com.companyname.NETPurchasesBindingTest</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+	  <ProjectReference Include="..\NETPurchasesBinding\NETPurchasesBinding.csproj" />
+	</ItemGroup>
+
+      <ItemGroup>
+        <Reference Include="NETPurchasesBinding">
+          <HintPath>..\NETPurchasesBinding\bin\Release\net6.0-android\NETPurchasesBinding.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+
+
+      <ItemGroup>
+          <None Include="*.aar" />
+      </ItemGroup>
+
+      
+      <ItemGroup>
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-common-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-store-amazon-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-feature-identity-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-feature-subscriber-attributes-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-public-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-strings-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-core-utils-5.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-hybrid-common-3.3.0.aar" />
+        <AndroidLibrary Remove="com.revenuecat.purchases.purchases-store-google-5.3.0.aar" />
+      </ItemGroup>
+  <ItemGroup>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-common-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-store-amazon-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-feature-identity-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-feature-subscriber-attributes-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-public-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-strings-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-core-utils-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-hybrid-common-3.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="com.revenuecat.purchases.purchases-store-google-5.3.0.aar">
+      <Bind>false</Bind>
+      <Pack>true</Pack>
+      <AndroidSkipResourceProcessing></AndroidSkipResourceProcessing>
+    </AndroidAarLibrary>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.7.10" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Common" Version="1.7.10" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk7" Version="1.7.10" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.7.10" />
+    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.8.0" />
+    <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.8.0" />
+    <PackageReference Include="Xamarin.AndroidX.Arch.Core.Common" Version="2.1.0.15" />
+    <PackageReference Include="Xamarin.AndroidX.Arch.Core.Runtime" Version="2.1.0.15" />
+  </ItemGroup>
+</Project>

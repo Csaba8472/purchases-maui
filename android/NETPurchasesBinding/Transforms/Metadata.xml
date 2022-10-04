@@ -1,0 +1,21 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+	<remove-node path="/api/package[@name='com.revenuecat.purchases']/class[@name='CustomerInfo']" />
+	<remove-node path="/api/package[@name='com.revenuecat.purchases']/class[@name='EntitlementInfo']" />
+	<remove-node path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='StoreProduct']"/>
+	<remove-node path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='StoreTransaction']" />
+	<remove-node path="/api/package[@name='com.revenuecat.purchases']/class[@name='Offering']"/>
+	<remove-node path="/api/package[@name='com.revenuecat.purchases']/class[@name='Package']"/>
+	<remove-node path="/api/package[@name='com.revenuecat.purchases']/class[@name='PurchaserInfo']" />
+	<remove-node path="/api/package[@name='com.revenuecat.purchases']/class[@name='EntitlementInfos']" />
+	<remove-node path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Transaction']" />
+	<remove-node  path="/api/package[@name='com.revenuecat.purchases']/class[@name='Offerings']" />
+	<remove-node  path="/api/package[@name='com.revenuecat.purchases.interfaces']/interface[@name='GetSkusResponseListener']" />
+	<remove-node  path="/api/package[@name='com.revenuecat.purchases.amazon']/class[@name='DefaultPurchasingServiceProvider']" />
+</metadata>
